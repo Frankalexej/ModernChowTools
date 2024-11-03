@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>諸侯紀年計算器</title>
+    <script src="kingCalculator.js"></script>
+    <link rel="stylesheet" href="kingCalculator.css">
+    <style>
+        /* #manageKingsSection { display: none; } */
+    </style>    
+</head>
+<body>
+    <h1>諸侯紀年計算器</h1>
+    <button id="configureButton" onclick="toggleManageKingsSection()">注冊諸侯</button>
+    
+    <!-- Section for adding, modifying, or deleting kings -->
+    <div id="manageKingsSection" style="display: none;">
+        <h2>注冊諸侯</h2>
+        <!-- Dropdown for selecting existing names -->
+        <select id="kingNameSelect" onchange="populateInput();">
+            <option value="">新增年號</option>
+        </select>
+        <input type="text" id="kingName" placeholder="年號">
+        <input type="number" id="startYear" placeholder="元年年數（公元前）">
+        <input type="number" id="endYear" placeholder="卒年年數（公元前）">
+        <button onclick="addOrModifyKing()">新增或修改</button>
+        <button onclick="deleteKing()">刪除</button>
+        <button onclick="downloadCSV()">下載注冊諸侯</button>
+        <input type="file" id="fileInput" style="display: none;" accept=".jinian">
+        <button onclick="toggleManageKingsSection()">關閉</button>
+    </div>
+    <button onclick="triggerFileUpload()">上傳注冊諸侯</button>
+    <!-- Section for selecting a king and entering a year -->
+    <div>
+        <h2>計算</h2>
+        <select id="kingSelect">
+            <!-- <option value="BCE">公元前</option>
+            <option value="CE">公元</option> -->
+        </select>
+        <input type="text" id="yearInput" placeholder="484">
+        <button onclick="calculateYear()">計算</button>
+    </div>
+
+    <!-- Section for displaying results -->
+    <div>
+        <h2>計算結果</h2>
+        <div id="results"></div>
+    </div>
+</body>
+</html>
