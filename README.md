@@ -6,3 +6,6 @@
 
 ## 古希腊语译音转换
 古希臘語音譯詞轉換器，參照「羅氏譯音表第二版」。
+
+## Hadley & Allen (1884): A Greek Grammar for Schools and Colleges 查看器
+可根據詞條編號檢索的古希臘語語法書閲讀器
