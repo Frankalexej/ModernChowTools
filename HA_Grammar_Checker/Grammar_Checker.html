@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>HADLEY & ALLEN (1884)</title>
+  <link rel="stylesheet" href="grammar_checker.css">
+  <script src="grammar_checker.js" defer></script>
+</head>
+<body>
+    <div class="container">
+      <h2>A GREEK GRAMMAR FOR SCHOOLS AND COLLEGES</h2>
+  
+      <div class="toolbar">
+        <div class="tool">
+          <label for="entryInput">Entry</label>
+          <input type="number" id="entryInput" min="1">
+          <button onclick="findPage()">Find</button>
+        </div>
+      
+        <div class="tool">
+          <button onclick="prevPage()">⟵</button>
+          <button onclick="nextPage()">⟶</button>
+        </div>
+      
+        <div class="tool">
+          <label for="pageInput">Page</label>
+          <input type="number" id="pageInput" step="1">
+          <button onclick="goToPage()">Go</button>
+        </div>
+      </div>
+      
+      <p id="result"></p>      
+    </div>
+    <div id="images"></div>
+  </body>
+</html>
